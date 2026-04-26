@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-USA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="form-box">
+
+             <form #frm="ngForm"  (ngSubmit)="calcularResultado()">
+                <h2> Calculadora </h2>
+                <label for=""> Insira o 1° número: </label>
+                <input type="number" name="numero1" id="numero1" [(ngModel)]="numero1">
+
+
+                <label for=""> Insira o 2° número: </label>
+                <input type="number" name="numero2" id="numero2" [(ngModel)]="numero2">
+
+                <button type="submit"> Somar </button>
+             </form>
+
+             <div class="result-display">
+                <p> Resultado: <span id="result"> {{ resultado }} </span> </p>
+             </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
